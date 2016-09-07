@@ -5,10 +5,10 @@ function countLetters(str) {
     if(charMap[charList[i]] === undefined) {
       charMap[charList[i]] = {};
       charMap[charList[i]].count = 1;
-      charMap[charList[i]].index = i;
+      charMap[charList[i]].index = [i];
     } else {
       charMap[charList[i]].count += 1;
-      charMap[charList[i]].index += ", " + i;
+      charMap[charList[i]].index.push(i);
     }
 
   }
@@ -17,3 +17,4 @@ function countLetters(str) {
 }
 
 console.log(countLetters("lighthouse in the house"));
+
